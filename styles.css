@@ -1,7 +1,8 @@
-/*styles for TK project*/
+/*styles for biosite2019*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300i,400,500i,700&display=swap');
 
+/* BASIC STYLES */
 * {
   box-sizing: border-box;
 }
@@ -20,15 +21,22 @@ body {
   color: #0E0033;
   font-family: Roboto;
 }
+
+/* TEMPLATE PAGE */
 .content {
   flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-p {
-  font-size: 2em;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.site-title {
+header h1 {
 	background-color: #02009F;
 	color: white;
 	font-size: 2rem;
@@ -40,9 +48,45 @@ p {
 	margin: 0;
 }
 
+nav a {
+  margin: 1rem;
+  text-decoration: none;
+}
+
+nav a:link, nav a:visited {
+  color: #02009F;
+}
+
+nav a:hover, nav a:active {
+  font-weight: 700;
+}
+
 footer {
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 3rem;
   text-align: center;
   background-color: #EFEFF5;
+}
+
+footer div {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+footer p {
+  text-align: left;
+  max-width: 200px;
+}
+
+footer div div {
+  justify-content: flex-end;
+}
+
+footer img {
+  width: 32px;
+  margin: 1rem;
 }
