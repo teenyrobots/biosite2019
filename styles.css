@@ -25,7 +25,7 @@ body {
 /* TEMPLATE PAGE */
 .content {
   flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  width: 100%;
+  width: 95%;
   max-width: 1000px;
   margin: auto;
 }
@@ -61,15 +61,20 @@ nav a:hover, nav a:active {
   font-weight: 700;
 }
 
+nav a:last-of-type, footer img:last-of-type {
+  margin-right: 0;
+}
+
 footer {
+  width: 100%;
+  padding: 3rem 0;
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 3rem;
   text-align: center;
   background-color: #EFEFF5;
 }
 
 footer div {
-  width: 100%;
+  width: 95%;
   max-width: 1000px;
   margin: auto;
   display: flex;
@@ -89,4 +94,26 @@ footer div div {
 footer img {
   width: 32px;
   margin: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  header, footer div, footer div div {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav, nav a {
+    margin: 1.5rem;
+  }
+
+  nav a:last-of-type, footer img:last-of-type {
+    margin-right: 1rem;
+  }
+
+  footer {
+    padding: 1rem 0;
+  }
+
 }
